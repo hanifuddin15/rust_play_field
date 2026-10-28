@@ -1,0 +1,17 @@
+[application]
+name = "frontend"
+default_platform = "web"
+out_dir = "dist"
+asset_dir = "assets"
+
+[web.app]
+title = "Axum + Dioxus Fullstack"
+
+[web.watcher]
+reload_html = true
+watch_path = ["src", "assets"]
+
+# Proxies /api requests from dev server to Axum backend on port 3000
+[[web.proxy]]
+backend = "http://127.0.0.1:3000/api"
+
