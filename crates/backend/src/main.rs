@@ -1,6 +1,6 @@
 use axum::{
     http::{header, HeaderValue, Method},
-    routing::{get, post},
+    routing::get,
     Router,
 };
 use std::net::SocketAddr;

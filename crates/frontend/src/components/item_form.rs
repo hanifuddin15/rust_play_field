@@ -51,9 +51,10 @@ pub fn ItemForm(on_create: EventHandler<(String, Option<String>)>) -> Element {
                 disabled: is_empty || *is_submitting.read(),
                 onclick: handle_submit,
                 if *is_submitting.read() {
-                    rsx! { span { class: "spinner" } "Adding..." }
+                    span { class: "spinner" }
+                    "Adding..."
                 } else {
-                    rsx! { "Add Task" }
+                    "Add Task"
                 }
             }
         }
